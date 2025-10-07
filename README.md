@@ -1,1 +1,1 @@
-# Mabini-Tourism
+# tourism-spot-mabini
