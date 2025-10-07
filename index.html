@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mabini Tourist Spot</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {background: #f5f5f5; color: #333; font-family: 'Poppins', sans-serif;}
+
+    h1, h2, h3 {font-family: 'Montserrat', sans-serif;}
+
+    /* Header */
+    header {
+      background: url('https://www.sandals.com/blog/content/images/2022/03/Sandals-Emerald-Bay-Sand-Dune-Couple.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 4rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-size: var(--fs+50);
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #000;
+      padding: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    /* Sections */
+    section {
+      margin: 50px auto;
+      max-width: 1100px;
+      text-align: center;
+    }
+    section h3, section h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* Tourist Spots */
+    .spot-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+    .spot, .resort {
+      width: 220px;
+      min-width: 220px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .spot img, .resort img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      margin-bottom: 0.5rem;
+    }
+    .spot img:hover, .resort img:hover {transform: scale(1.05);}
+    .spot-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+      margin-top: 0.3rem;
+      font-weight: 500;
+    }
+    .stars {
+      color: #FFD700;
+      font-size: 1.1rem;
+    }
+
+    /* Contact + Login Section */
+    #contact-login {
+      background: #0f2942; /* dark full background */
+      color: white;
+      padding: 4rem 2rem;
+      margin: 0; /* remove extra white gaps */
+      max-width: 100%; /* make sure it's full width */
+    }
+
+    .contact-login-box {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .contact-part, .login-part {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .contact-part h2, .login-part h2 {
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+
+    .contact-part h2::after, .login-part h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: #3fa9f5; /* accent */
+      margin-top: 5px;
+    }
+
+    .contact-part p, .login-part p {
+      margin: 12px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-info p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-info i {
+      font-size: 1.2rem;
+      color: #3fa9f5;
+    }
+
+    .contact-part h2, .login-part h2, .contact-part p {
+      text-align: left;   
+    }
+
+    /* Login styles */
+    .login-part input {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-part button {
+      padding: 10px 20px;
+      border: none;
+      background: #3fa9f5;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .login-part button:hover {
+      background: #2a7fc1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#spots">Tourist Spots</a>
+    <a href="#contact-login">Contact</a>
+    <a href="#contact-login">Log In</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Mabini, Batangas</h1>
+    <p>Discover the birthplace of scuba diving in the Philippines</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h1>About Mabini</h1>
+    <p>Mabini, Batangas is famous for its pristine beaches, stunning dive spots, and breathtaking mountains. Known as the birthplace of scuba diving in the Philippines, it attracts adventurers and travelers looking for both relaxation and exploration.</p>
+  </section>
+
+  <!-- Tourist Spots -->
+  <section id="spots">
+    <h1>Tourist Spots</h1>
+    <div class="spot-container">
+      <div class="spot">
+        <img src="https://thequeensescape.com/wp-content/uploads/2020/11/Mt.-Gulugod-Baboy-Hike-1-1024x576.jpg" alt="Mt. Gulugod Baboy">
+        <div class="spot-name">Mt. Gulugod Baboy <span class="stars">★★★★★</span></div>
+      </div>
+      <div class="spot">
+        <img src="https://thesmartlocal.ph/wp-content/uploads/2021/02/image37.jpg" alt="Sombrero Island">
+        <div class="spot-name">Sombrero Island <span class="stars">★★★★★</span></div>
+      </div>
+      <div class="resort">
+        <img src="http://pix10.agoda.net/hotelImages/596/59639/59639_17080514170054924734.jpg?s=1024x768" alt="Eagle Point Resort">
+        <div class="spot-name">Eagle Point Resort <span class="stars">★★★★★</span></div>
+      </div>
+      <div class="resort">
+        <img src="https://i2.wp.com/c1.staticflickr.com/1/741/33400475615_a7692a3e72_b.jpg?resize=1024%2C683&ssl=1" alt="Camp Netanya Resort">
+        <div class="spot-name">Camp Netanya Resort & Spa <span class="stars">★★★★★</span></div>
+      </div>
+      <div class="resort">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/83/e2/39/mabini.jpg" alt="Planet Dive Resort">
+        <div class="spot-name">Planet Dive Resort <span class="stars">★★★★★</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact + Login -->
+  <section id="contact-login">
+    <div class="contact-login-box">
+      <div class="contact-part">
+        <h2>Contact Us</h2>
+        <p>Feel free to contact and reach us!!</p>
+        <div class="contact-info">
+          <p><i class="ri-phone-line"></i> +63 912 345 6789</p>
+          <p><i class="ri-mail-line"></i> info@mabinitourism.com</p>
+          <p><i class="ri-map-pin-line"></i> Mabini, Batangas, Philippines</p>
+        </div>
+      </div>
+      <div class="login-part">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username"><br>
+        <input type="password" placeholder="Password"><br>
+        <button>Login</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
